@@ -13,6 +13,7 @@ export default class Scene {
    */
   constructor(game) {
     this.game = game;
+    setInterval(this.update.bind(this), 100);
   }
 
   /**
@@ -21,10 +22,19 @@ export default class Scene {
    * @memberof Scene
    */
   start() {
-    this.game.display.clear();
     window.addEventListener('keydown', this);
     window.addEventListener('mousedown', this);
     window.addEventListener('mouseup', this);
+    this.update();
+  }
+
+  /**
+   * Updates the slide.
+   *
+   * @memberof Scene1
+   */
+  update() {
+    this.game.display.clear();
   }
 
   /**
