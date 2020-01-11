@@ -54,9 +54,10 @@ export default class Scene1 extends Scene {
     if (!document.fullscreenElement) {
       this.game.display.getContainer().requestFullscreen();
     }
-    if (event.type === 'mouseup') {
-      this.game.at.target = null;
-    } else if (event.type === 'mousedown') {
+    // if (event.type === 'mouseup') {
+    //   this.game.at.target = null;
+    // } else
+    if (event.type === 'mousedown') {
       this.game.display.draw(2, 2, '>');
       this.game.at.target = {
         x: this.eventX,

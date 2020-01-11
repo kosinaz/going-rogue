@@ -10,8 +10,8 @@ export default class Game {
 
 }
 Game.display = new Display({
-  width: 46,
-  height: 13,
+  width: 46, // 1840
+  height: 13, // 936
   fontSize: 72,
 });
 Game.at = {
