@@ -29,6 +29,7 @@ export default class Scene1 extends Scene {
    */
   handleEvent(event) {
     super.handleEvent(event);
+    this.game.display.getContainer().requestFullscreen();
     if (event.type === 'keydown') {
       if (event.keyCode === 37) {
         this.game.at.x -= 1;
