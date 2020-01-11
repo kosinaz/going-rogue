@@ -14,10 +14,8 @@ Game.display = new Display({
   height: 13, // 936
   fontSize: 72,
 });
-Game.at = {
-  x: 15,
-  y: 5,
-},
+Game.i;
+Game.users = [];
 document.body.appendChild(Game.display.getContainer());
 Game.scene1 = new Scene1(Game);
 Game.scene1.start();

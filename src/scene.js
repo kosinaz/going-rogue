@@ -13,7 +13,7 @@ export default class Scene {
    */
   constructor(game) {
     this.game = game;
-    setInterval(this.update.bind(this), 100);
+    this.interval = setInterval(this.update.bind(this), 200);
   }
 
   /**
@@ -24,7 +24,6 @@ export default class Scene {
   start() {
     window.addEventListener('keydown', this);
     window.addEventListener('mousedown', this);
-    window.addEventListener('mouseup', this);
     this.update();
   }
 
